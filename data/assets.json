@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "Bitcoin", "type": "crypto" },
+  { "id": 2, "name": "Ethereum", "type": "crypto" },
+  { "id": 3, "name": "Apple", "type": "stock" },
+  { "id": 4, "name": "Tesla", "type": "stock" },
+  { "id": 5, "name": "USD", "type": "fiat" },
+  { "id": 6, "name": "Gold", "type": "stock" },
+  { "id": 7, "name": "Amazon", "type": "stock" },
+  { "id": 8, "name": "BNB", "type": "crypto" },
+  { "id": 9, "name": "Euro", "type": "fiat" }
+]
