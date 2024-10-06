@@ -1,0 +1,69 @@
+{
+  "id": 1,
+  "asOf": "2024-01-01",
+  "positions": [
+    {
+      "id": 1,
+      "asset": "Bitcoin",
+      "quantity": 1.5,
+      "asOf": "2024-01-01",
+      "price": 60000
+    },
+    {
+      "id": 2,
+      "asset": "Ethereum",
+      "quantity": 10,
+      "asOf": "2024-01-01",
+      "price": 4200
+    },
+    {
+      "id": 3,
+      "asset": "Apple",
+      "quantity": 20,
+      "asOf": "2024-01-01",
+      "price": 190
+    },
+    {
+      "id": 4,
+      "asset": "Tesla",
+      "quantity": 5,
+      "asOf": "2024-01-01",
+      "price": 950
+    },
+    {
+      "id": 5,
+      "asset": "USD",
+      "quantity": 5000,
+      "asOf": "2024-01-01",
+      "price": 1
+    },
+    {
+      "id": 6,
+      "asset": "Gold",
+      "quantity": 3,
+      "asOf": "2024-01-01",
+      "price": 1950
+    },
+    {
+      "id": 7,
+      "asset": "Amazon",
+      "quantity": 8,
+      "asOf": "2024-01-01",
+      "price": 3600
+    },
+    {
+      "id": 8,
+      "asset": "BNB",
+      "quantity": 12,
+      "asOf": "2024-01-01",
+      "price": 400
+    },
+    {
+      "id": 9,
+      "asset": "Euro",
+      "quantity": 2000,
+      "asOf": "2024-01-01",
+      "price": 1.15
+    }
+  ]
+}
