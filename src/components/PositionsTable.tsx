@@ -2,15 +2,19 @@ import {AgGridReact} from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import {ViewBy} from "./SwitchControl.tsx";
+import {ColDef} from 'ag-grid-community';
 
 type PositionsTableProps = {
   data?: Map<string, number>;
   viewBy: string;
 };
 
-const PositionsTable: React.FC<PositionsTableProps> = ({data,viewBy}) => {
-  const columnDefs = [
-    {headerName: (viewBy === ViewBy.assetClass ? 'Type' : 'Asset'), field: 'label'},
+type PositionsTableRow = { label: string, value: number };
+
+const PositionsTable: React.FC<PositionsTableProps> = ({data, viewBy}) => {
+  const label = viewBy === ViewBy.assetClass ? 'Type' : 'Asset';
+  const columnDefs: ColDef<PositionsTableRow>[] = [
+    {headerName: label, field: 'label'},
     {headerName: 'Balance', field: 'value'}
   ];
 

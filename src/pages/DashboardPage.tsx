@@ -54,7 +54,7 @@ const Dashboard = () => {
   const [filteredBalances, setFilteredBalances] = useState<Map<string, number>>();
   const [historicalData, setHistoricalData] = useState<TimeData[]>();
   const [viewBy, setViewBy] = useState<ViewBy>(ViewBy.assetClass);
-  const [asOfBy, setAsOfBy] = useState<string>('2024-01-01'); // setAsOfBy will be used when we will add date filter
+  const [asOfBy,] = useState<string>('2024-01-01'); // setAsOfBy will be used when we will add date filter
 
   const [error, setError] = useState('');
 
