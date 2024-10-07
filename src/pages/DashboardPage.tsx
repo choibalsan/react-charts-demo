@@ -97,21 +97,27 @@ const Dashboard = () => {
   }
 
   return (
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-4">Personal Dashboard</h1>
+      <div className="container mx-auto">
+        <h1 className="text-3xl font-bold p-7">Personal Portfolio Breakdown</h1>
+        <div className="grid grid-cols-2 gap-4 p-4 h-96">
+          <div className="p-4 flex flex-col justify-start h-full">
+            <div className="h-16">
+              <SwitchControl
+                  viewBy={viewBy}
+                  setViewBy={setViewBy}/>
+            </div>
 
-        <SwitchControl viewBy={viewBy} setViewBy={setViewBy}/>
+            <div className="h-80 ag-theme-alpine">
+              <PositionsTable data={filteredBalances} viewBy={viewBy}/>
+            </div>
+          </div>
+          <div className="p-4 flex justify-center h-96 relative">
+            <PortfolioDonutChart data={filteredBalances} viewBy={viewBy}/>
+          </div>
 
-        <div className="my-4">
-          <PortfolioDonutChart data={filteredBalances} viewBy={viewBy}/>
-        </div>
-
-        <div className="my-4">
-          <PositionsTable data={filteredBalances} viewBy={viewBy}/>
-        </div>
-
-        <div className="my-4">
-          <HistoricalChart data={historicalData || []}/>
+          <div className="col-span-2 p-4 flex justify-center h-96 w-full relative">
+            <HistoricalChart data={historicalData || []}/>
+          </div>
         </div>
       </div>
   );

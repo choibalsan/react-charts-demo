@@ -12,17 +12,21 @@ type PositionsTableProps = {
 type PositionsTableRow = { label: string, value: number };
 
 const PositionsTable: React.FC<PositionsTableProps> = ({data, viewBy}) => {
-  const label = viewBy === ViewBy.assetClass ? 'Type' : 'Asset';
   const columnDefs: ColDef<PositionsTableRow>[] = [
-    {headerName: label, field: 'label'},
-    {headerName: 'Balance', field: 'value'}
+    {
+      headerName: (viewBy === ViewBy.assetClass ? 'Type' : 'Asset'),
+      field: 'label'
+    },
+    {
+      headerName: 'Balance',
+      field: 'value'
+    }
   ];
 
   return (
-      <div className="ag-theme-alpine" style={{height: 400, width: '100%'}}>
-        <AgGridReact rowData={data ? Array.from(data, ([label, value]) => ({label, value})) : []}
-                     columnDefs={columnDefs}/>
-      </div>
+      <AgGridReact
+          rowData={data ? Array.from(data, ([label, value]) => ({label, value})) : []}
+          columnDefs={columnDefs}/>
   );
 };
 

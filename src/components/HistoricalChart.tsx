@@ -1,11 +1,11 @@
-import { Line } from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 import {TimeData} from "../models/TimeData.ts";
 
 type HistoricalChartProps = {
   data: TimeData[];  // Historical data: date and total portfolio value
 };
 
-const HistoricalChart: React.FC<HistoricalChartProps> = ({ data }) => {
+const HistoricalChart: React.FC<HistoricalChartProps> = ({data}) => {
   const chartData = {
     labels: data.map(d => d.date),  // X-axis: Dates
     datasets: [{
@@ -16,7 +16,8 @@ const HistoricalChart: React.FC<HistoricalChartProps> = ({ data }) => {
     }]
   };
 
-  return <Line data={chartData} />;
+  return <Line data={chartData}
+               options={{maintainAspectRatio: false}}/>;
 };
 
 export default HistoricalChart;
